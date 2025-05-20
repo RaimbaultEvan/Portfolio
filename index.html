@@ -25,20 +25,6 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         
-        .skill-bar {
-            height: 8px;
-            border-radius: 4px;
-            background: #e2e8f0;
-            overflow: hidden;
-        }
-        
-        .skill-progress {
-            height: 100%;
-            border-radius: 4px;
-            background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
-            transition: width 1s ease-in-out;
-        }
-        
         .floating-shape {
             animation: float 6s ease-in-out infinite;
         }
@@ -222,35 +208,24 @@
                         <i class="fas fa-network-wired text-blue-600 mr-3"></i>
                         Réseaux & Systèmes
                     </h3>
-                    <div class="space-y-5">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="font-medium text-gray-700">Cisco (commutateurs/routeurs)</span>
-                                <span class="text-blue-600 font-bold">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="font-medium text-gray-700">Windows Server</span>
-                                <span class="text-blue-600 font-bold">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="font-medium text-gray-700">Virtualisation (Hyper-V/VMware)</span>
-                                <span class="text-blue-600 font-bold">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            Cisco (commutateurs/routeurs)
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            Windows Server (AD, DHCP, DNS)
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            Virtualisation (Hyper-V/VMware)
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            Gestion des sauvegardes
+                        </li>
+                    </ul>
                 </div>
                 
                 <!-- Colonne 2 -->
@@ -259,35 +234,24 @@
                         <i class="fas fa-tools text-blue-600 mr-3"></i>
                         Maintenance & Support
                     </h3>
-                    <div class="space-y-5">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="font-medium text-gray-700">Maintenance matérielle</span>
-                                <span class="text-blue-600 font-bold">95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="font-medium text-gray-700">Linux (Debian)</span>
-                                <span class="text-blue-600 font-bold">40%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 40%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="font-medium text-gray-700">Support utilisateur</span>
-                                <span class="text-blue-600 font-bold">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            Maintenance matérielle
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            Linux (Debian)
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            Support utilisateur
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            Installation et configuration de postes
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -378,12 +342,11 @@
                                     <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-4"></i>
                                     <span class="text-gray-700">Jallais 49510</span>
                                 </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-car text-blue-600 mt-1 mr-4"></i>
+                                    <span class="text-gray-700">Mobilité : Permis B</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="mt-8">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Disponibilités</h3>
-                            <p class="text-gray-700"></p>
-                            <p class="text-gray-700 mt-2">Mobilité : Permis B</p>
                         </div>
                     </div>
                 </div>
@@ -403,33 +366,26 @@
     </div>
 
     <script>
-        // Animation des barres de compétences au scroll
+        // Animation des éléments au scroll
         document.addEventListener('DOMContentLoaded', function() {
-            const skillBars = document.querySelectorAll('.skill-progress');
-            
-            const animateSkills = () => {
-                skillBars.forEach(bar => {
-                    const width = bar.style.width;
-                    bar.style.width = '0';
-                    setTimeout(() => {
-                        bar.style.width = width;
-                    }, 100);
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.animate__animated');
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add(entry.target.dataset.animate);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                elements.forEach(element => {
+                    observer.observe(element);
                 });
             };
             
-            // Détection du scroll pour déclencher l'animation
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateSkills();
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-            
-            document.querySelectorAll('#skills').forEach(section => {
-                observer.observe(section);
-            });
+            animateOnScroll();
         });
     </script>
 </body>
