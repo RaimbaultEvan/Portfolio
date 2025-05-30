@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Infrastructure Réseau | Evan Raimbault</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .floating-shape {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .btn-download {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-download:after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255,255,255,0.2);
+            transform: rotate(30deg);
+            transition: all 0.3s;
+        }
+        
+        .btn-download:hover:after {
+            left: 100%;
+        }
+        
+        .tech-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-badge:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen p-6 overflow-x-hidden">
+    <!-- Formes décoratives animées -->
+    <div class="floating-shape absolute top-0 left-0 w-64 h-64 bg-blue-400 rounded-full opacity-10 -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+    <div class="floating-shape absolute bottom-0 right-0 w-96 h-32 bg-blue-500 opacity-10 skew-y-6 -translate-x-1/2 translate-y-1/2" style="animation-delay: 2s;"></div>
+    
+    <div class="max-w-6xl mx-auto relative z-10">
+        <!-- Bouton retour -->
+        <div class="mb-8">
+            <a href="index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition">
+                <i class="fas fa-arrow-left mr-2"></i> Retour au portfolio
+            </a>
+        </div>
+        
+        <!-- Header du projet -->
+        <header class="text-center mb-12 animate__animated animate__fadeIn">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
+                Infrastructure Réseau d'une École
+            </h1>
+            <div class="inline-block relative">
+                <p class="text-lg text-gray-600 relative z-10 px-4 py-2 bg-white/80 rounded-lg shadow-sm">
+                    Projet réalisé dans le cadre de mon BTS SIO SISR
+                </p>
+                <div class="absolute -z-10 -inset-1 bg-gradient-to-r from-blue-200 to-blue-300 rounded-lg blur opacity-75"></div>
+            </div>
+        </header>
+
+        <!-- Section Présentation -->
+        <section class="mb-16 animate__animated animate__fadeInUp">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/2">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-700 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200"></div>
+                        <div class="relative bg-white p-1 rounded-lg shadow-xl">
+                            <img src="PPE/MAcodemy/Nos images/Clipped_image_20250404_112529.png" alt="Schéma réseau" class="rounded-lg w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800 flex items-center">
+                        <span class="w-8 h-1 bg-blue-600 mr-4"></span>
+                        Présentation du projet
+                    </h2>
+                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                        <p class="text-gray-700 mb-4 text-lg leading-relaxed">
+                            Ce projet consistait à concevoir et mettre en œuvre une infrastructure réseau complète pour une école fictive, comprenant la configuration des serveurs, la gestion des postes clients et la sécurisation des communications.
+                        </p>
+                        <p class="text-gray-700 mb-4 text-lg leading-relaxed">
+                            L'objectif était de créer un environnement fonctionnel permettant la gestion centralisée des utilisateurs, des ressources partagées et des politiques de sécurité.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mt-6">
+                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">Windows Server 2022</span>
+                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">Active Directory</span>
+                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">DHCP/DNS</span>
+                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">GPO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Objectifs -->
+        <section class="mb-16 animate__animated animate__fadeInUp">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800 flex items-center">
+                <span class="w-8 h-1 bg-blue-600 mr-4"></span>
+                Objectifs du projet
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Infrastructure</h3>
+                    <p class="text-gray-600">Mettre en place une architecture réseau scalable et sécurisée pour une école de 200 utilisateurs</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Sécurité</h3>
+                    <p class="text-gray-600">Implémenter des politiques de sécurité adaptées au contexte scolaire</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Gestion</h3>
+                    <p class="text-gray-600">Automatiser la gestion des ressources partagées</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Réalisation -->
+        <section class="mb-16 animate__animated animate__fadeInUp">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800 flex items-center">
+                <span class="w-8 h-1 bg-blue-600 mr-4"></span>
+                Réalisation technique
+            </h2>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg card-hover mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-server text-blue-600 mr-4"></i>
+                    Configuration des serveurs
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-3">Serveur Active Directory</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Installation de Windows Server 2022</li>
+                            <li>Configuration des rôles AD DS, DHCP, DNS</li>
+                            <li>Création des UO (Unitées D'organisation)</li>
+                            <li>Déploiement des GPO (Politiques de groupe)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-3">Serveur WEB</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Serveur stockant la page web de l'école </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-desktop text-blue-600 mr-4"></i>
+                    Postes clients
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-3">Configuration</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Installation Windows 10/11 Pro</li>
+                            <li>Jonction au domaine</li>
+                            <li>Applications métiers préinstallées</li>
+                            <li>Accès aux ressources partagées</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-3">Sécurité</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Restrictions via GPO</li>
+                            <li>Antivirus centralisé</li>
+                            <li>Filtrage web</li>
+                            <li>Contrôle des périphériques USB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Documentation -->
+        <section class="mb-16 animate__animated animate__fadeInUp">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800 flex items-center">
+                <span class="w-8 h-1 bg-blue-600 mr-4"></span>
+                Documentation & Ressources
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="PPE/MAcodemy/Consignes (original).pdf" download class="bg-white p-6 rounded-xl shadow-lg card-hover group">
+                    <div class="text-blue-600 text-3xl mb-4 group-hover:text-blue-800 transition">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition">Consignes Techniques</h3>
+                    <p class="text-gray-600">Consignes Techniques données pour la Réalisation du projet</p>
+                    <div class="mt-4 text-sm text-blue-600 flex items-center">
+                        <i class="fas fa-download mr-2"></i> Télécharger (PDF - 807Ko)
+                    </div>
+                </a>
+                
+                <a href="/PPE/MAcodemy/Documentation technique.pdf" download class="bg-white p-6 rounded-xl shadow-lg card-hover group">
+                    <div class="text-blue-600 text-3xl mb-4 group-hover:text-blue-800 transition">
+                        <i class="fas fa-download ml-2"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition">Rapport technique</h3>
+                    <p class="text-gray-600">Détails de l'implémentation</p>
+                    <div class="mt-4 text-sm text-blue-600 flex items-center">
+                        <i class="fas fa-download mr-2"></i> Télécharger (PDF - 2.5Mo)
+                    </div>
+                </a>
+                
+                <a href="/PPE/MAcodemy/Schéma Réseau Macodemy.pkt" download class="bg-white p-6 rounded-xl shadow-lg card-hover group">
+                    <div class="text-blue-600 text-3xl mb-4 group-hover:text-blue-800 transition">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition">Maquette Réseaux</h3>
+                    <p class="text-gray-600">Maquette du réseaux réalisée sur Cisco Packet Tracer</p>
+                    <div class="mt-4 text-sm text-blue-600 flex items-center">
+                        <i class="fas fa-download mr-2"></i> Télécharger (PKT - 77.2Ko)
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section Galerie -->
+        <section class="mb-16 animate__animated animate__fadeInUp">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800 flex items-center">
+                <span class="w-8 h-1 bg-blue-600 mr-4"></span>
+                Galerie du projet
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="PPE/MAcodemy/Nos images/Schéma Réseau.png" class="group">
+                    <div class="bg-white p-2 rounded-lg shadow-md overflow-hidden">
+                        <img src="PPE/MAcodemy/Nos images/Schéma Réseau.png" alt="Schéma réseau" class="w-full h-48 object-cover rounded transition group-hover:scale-105">
+                        <div class="p-4">
+                            <h3 class="font-medium text-gray-800 group-hover:text-blue-600 transition">Schéma réseau</h3>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="img/console-ad.jpg" class="group">
+                    <div class="bg-white p-2 rounded-lg shadow-md overflow-hidden">
+                        <img src="img/console-ad-thumb.jpg" alt="Console AD" class="w-full h-48 object-cover rounded transition group-hover:scale-105">
+                        <div class="p-4">
+                            <h3 class="font-medium text-gray-800 group-hover:text-blue-600 transition">Console Active Directory</h3>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/PPE/MAcodemy/Nos images/QuickShare_2504071225_Images/Switch-Routeur.jpg" class="group">
+                    <div class="bg-white p-2 rounded-lg shadow-md overflow-hidden">
+                        <img src="/PPE/MAcodemy/Nos images/QuickShare_2504071225_Images/Switch-Routeur.jpg" alt="Switch et Routeurs installés" class="w-full h-48 object-cover rounded transition group-hover:scale-105">
+                        <div class="p-4">
+                            <h3 class="font-medium text-gray-800 group-hover:text-blue-600 transition">Switch et Routeurs installés</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section Compétences acquises -->
+        <section class="mb-16 animate__animated animate__fadeInUp">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800 flex items-center">
+                <span class="w-8 h-1 bg-blue-600 mr-4"></span>
+                Compétences acquises
+            </h2>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Techniques</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-3"></i>
+                                <span>Maîtrise de l'installation et configuration de Windows Server</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-3"></i>
+                                <span>Gestion avancée d'Active Directory et des GPO</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-3"></i>
+                                <span>Mise en place de solutions DHCP et DNS</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Transversales</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-3"></i>
+                                <span>Rédaction de documentation technique</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-3"></i>
+                                <span>Gestion de projet en autonomie</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-3"></i>
+                                <span>Présentation orale des résultats</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-8 border-t border-gray-200">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.linkedin.com/in/evan-raimbault-64b322344/" class="text-gray-600 hover:text-blue-600 transition">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-600">© 2025 Evan Raimbault - Tous droits réservés</p>
+        </footer>
+    </div>
+
+    <script>
+        // Animation des éléments au scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.animate__animated');
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add(entry.target.dataset.animate);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                elements.forEach(element => {
+                    observer.observe(element);
+                });
+            };
+            
+            animateOnScroll();
+        });
+    </script>
+</body>
+</html>
