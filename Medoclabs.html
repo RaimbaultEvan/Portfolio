@@ -81,7 +81,7 @@
         <!-- Header du projet -->
         <header class="text-center mb-12 animate__animated animate__fadeIn">
             <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
-                Création d'un site web pour une société de location de gîtes fictive
+                Virtualisation d'un réseau informatique
             </h1>
             <div class="inline-block relative">
                 <p class="text-lg text-gray-600 relative z-10 px-4 py-2 bg-white/80 rounded-lg shadow-sm">
@@ -98,7 +98,7 @@
                     <div class="relative group">
                         <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-700 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200"></div>
                         <div class="relative bg-white p-1 rounded-lg shadow-xl">
-                            <img src="LogoEcogite.png" alt="Logo de l'entreprise" class="rounded-lg w-full h-auto">
+                            <img src="LogoMedoclabs.png" alt="Logo du projet" class="rounded-lg w-full h-auto">
                         </div>
                     </div>
                 </div>
@@ -109,15 +109,18 @@
                     </h2>
                     <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
                         <p class="text-gray-700 mb-4 text-lg leading-relaxed">
-                            Ce projet consistait à concevoir un site web pour une entreprise de location de gîtes fictive, comprenant la création des pages internet composant ce site et leurs fonctionnement.
+                            Ce projet consistait à créer un réseau informatique composé uniquement de machines virtuelles.
                         </p>
                         <p class="text-gray-700 mb-4 text-lg leading-relaxed">
-                            L'objectif était de créer un site web fonctionnel, facile de navigation et pouvant se rapprocher au maximum d'un potentiel site commercial. 
+                            L'objectif était de créer un environnement fonctionnel permettant la gestion centralisée des utilisateurs et des ressources partagées.
                         </p>
                         <div class="flex flex-wrap gap-4 mt-6">
-                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">HTML</span>
-                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">CSS</span>
-                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">PHP</span>
+                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">Windows Server 2019</span>
+                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">Active Directory</span>
+                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">DNS</span>
+                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">GPO</span>
+                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">Machines Virtuelles</span>                      
+                            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium tech-badge">VMware</span>
                         </div>
                     </div>
                 </div>
@@ -135,8 +138,8 @@
                     <div class="text-blue-600 text-3xl mb-4">
                         <i class="fas fa-network-wired"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Structure</h3>
-                    <p class="text-gray-600">Mettre en place un site web fonctionnel </p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Infrastructure</h3>
+                    <p class="text-gray-600">Mettre en place une architecture réseau pour une entreprise</p>
                 </div>
                 
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
@@ -144,7 +147,7 @@
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Sécurité</h3>
-                    <p class="text-gray-600">Création d'une page de mentions légales</p>
+                    <p class="text-gray-600">Implémenter des politiques de sécurité adaptées au contexte de l'entreprise</p>
                 </div>
                 
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
@@ -152,7 +155,7 @@
                         <i class="fas fa-users-cog"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Gestion</h3>
-                    <p class="text-gray-600">Faire en sorte que les pages web communiquent bien entre elles</p>
+                    <p class="text-gray-600">Automatiser la gestion des ressources partagées</p>
                 </div>
             </div>
         </section>
@@ -167,60 +170,50 @@
             <div class="bg-white p-8 rounded-xl shadow-lg card-hover mb-8">
                 <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                     <i class="fas fa-server text-blue-600 mr-4"></i>
-                    Création des pages
+                    Configuration des serveurs
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <h4 class="font-bold text-gray-800 mb-3">Page d'accueil</h4>
+                        <h4 class="font-bold text-gray-800 mb-3">Serveur Active Directory</h4>
                         <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Page HTML accueil</li>
-                        <li>Page CSS accueil</li>
+                            <li>Installation de Windows Server 2022</li>
+                            <li>Configuration des rôles AD DS et DNS</li>
+                            <li>Création des UO (Unitées D'organisation)</li>
+                            <li>Déploiement des GPO (Politiques de groupe)</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="font-bold text-gray-800 mb-3">Page catalogue</h4>
+                        <h4 class="font-bold text-gray-800 mb-3">Serveur WEB</h4>
                         <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Page HTML catalogue</li>
-                            <li>Page CSS catalogue</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-800 mb-3">Page gîte 1</h4>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Page HTML gîte 1</li>
-                            <li>Page CSS gîte 1</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-800 mb-3">Page gîte 2</h4>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Page HTML gîte 2</li>
-                            <li>Page CSS gîte 2</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-800 mb-3">Page gîte 3</h4>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Page HTML gîte 3</li>
-                            <li>Page CSS gîte 3</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-800 mb-3">Page contact</h4>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Page HTML contact </li>
-                            <li>Page CSS contact</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-800 mb-3">Page mentions légales</h4>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Page HTML mentions légales</li>
-                            <li>Page CSS mentions légales</li>
+                            <li>Serveur stockant la page web de l'entreprise </li>
                         </ul>
                     </div>
                 </div>
             </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-desktop text-blue-600 mr-4"></i>
+                    Postes clients
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-3">Configuration</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Installation Windows 10</li>
+                            <li>Jonction au domaine</li>
+                            <li>Accès aux ressources partagées</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-3">Sécurité</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Restrictions via GPO</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Section Documentation -->
         <section class="mb-16 animate__animated animate__fadeInUp">
@@ -230,25 +223,25 @@
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <a href="Consignes Ecogite.pdf" download class="bg-white p-6 rounded-xl shadow-lg card-hover group">
+                <a href="Consignes Medoclabs.pdf" download class="bg-white p-6 rounded-xl shadow-lg card-hover group">
                     <div class="text-blue-600 text-3xl mb-4 group-hover:text-blue-800 transition">
                         <i class="fas fa-file-pdf"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition">Consignes Techniques</h3>
-                    <p class="text-gray-600">Consignes Techniques données pour la Réalisation du projet</p>
+                    <p class="text-gray-600">Consignes Techniques données pour la réalisation du projet</p>
                     <div class="mt-4 text-sm text-blue-600 flex items-center">
-                        <i class="fas fa-download mr-2"></i> Télécharger (PDF - 583Ko)
+                        <i class="fas fa-download mr-2"></i> Télécharger (PDF - 371Ko)
                     </div>
                 </a>
                 
-                <a href="Documentation technique Ecogite.pdf" download class="bg-white p-6 rounded-xl shadow-lg card-hover group">
+                <a href="Documentation technique MEDOCLABS.pdf" download class="bg-white p-6 rounded-xl shadow-lg card-hover group">
                     <div class="text-blue-600 text-3xl mb-4 group-hover:text-blue-800 transition">
                         <i class="fas fa-download ml-2"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition">Documentation technique</h3>
                     <p class="text-gray-600">Documentation technique du projet</p>
                     <div class="mt-4 text-sm text-blue-600 flex items-center">
-                        <i class="fas fa-download mr-2"></i> Télécharger (PDF - 4.1Mo)
+                        <i class="fas fa-download mr-2"></i> Télécharger (PDF - 441Ko)
                     </div>
                 </a>
             </div>
@@ -276,7 +269,7 @@
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-blue-500 mt-1 mr-3"></i>
-                                <span>Mise en place de solutions DHCP et DNS</span>
+                                <span>Mise en place de solutions DNS</span>
                             </li>
                         </ul>
                     </div>
